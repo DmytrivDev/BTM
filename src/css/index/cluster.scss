@@ -1,3 +1,41 @@
+.arrows {
+  &__body {
+    display: flex;
+    gap: 0 1.0625rem;
+  }
+
+  &__next,
+  &__prev {
+    border: 0.0625rem solid var(--cy);
+    border-radius: 50%;
+    padding: 1.25rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in;
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: 1.5rem 1.5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: var(--arrSlideRight);
+    }
+    &.isDisabled {
+      cursor: no-drop;
+      opacity: 0.7;
+    }
+  }
+
+  &__prev {
+    &::before {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .class {
   }
