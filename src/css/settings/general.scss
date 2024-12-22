@@ -31,9 +31,9 @@ body {
   margin: 0 auto;
 }
 
-/* --------- Adaptive desktop (1280px) --------- */
+/* --------- Adaptive desktop (1520px) --------- */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1520px) {
   html,
   body {
     font-size: 1.16vw;
@@ -53,18 +53,9 @@ body {
   }
 
   .main {
-    padding-bottom: 5rem;
+    padding-bottom: 3.125rem;
   }
 }
-
-/* --------- Adaptive tablet (772px) --------- */
-
-// @media screen and (max-width: 772px) {
-//   html,
-//   body {
-//     font-size: 2.07vw;
-//   }
-// }
 
 /* --------- Adaptive mobile (500px) --------- */
 
