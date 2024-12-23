@@ -1,4 +1,67 @@
 .evidence {
+  &__ava {
+    position: absolute;
+    top: -3.125rem;
+    left: -6.5625rem;
+    width: 13.125rem;
+    height: 13.125rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem 0;
+  }
+
+  &__tl {
+    font-family: var(--ff2);
+    font-weight: 400;
+    font-size: 4.125rem;
+    line-height: 0.90909;
+  }
+  &__activity {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 0.9375rem;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9375rem;
+      li {
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 0.0625rem solid var(--cm);
+          border-radius: 0.75rem;
+          padding: 1.25rem;
+          span {
+            width: 1rem;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .btn-def {
+      flex-shrink: 0;
+    }
+  }
+
+  .modal {
+    &__body {
+      padding: 3.125rem 3.125rem 3.125rem 8.125rem;
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
