@@ -59,6 +59,12 @@
       right: 0;
       width: 100%;
       color: var(--cw);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      pointer-events: none;
     }
   }
 

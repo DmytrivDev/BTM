@@ -1,21 +1,21 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-// const accord = document.querySelectorAll('.accord');
+const faqList = document.querySelectorAll('.faq__list');
 
-// accord?.forEach(list => {
-//   new Accordion(list, {
-//     duration: 400,
-//     showMultiple: false,
-//   });
+faqList?.forEach(list => {
+  new Accordion(list, {
+    duration: 400,
+    showMultiple: true,
+  });
 
-//   const panels = list.querySelectorAll('.ac-panel');
-//   panels.forEach(panel => {
-//     panel.addEventListener('click', event => {
-//       event.stopPropagation();
-//     });
-//   });
-// });
+  const panels = list.querySelectorAll('.ac-panel');
+  panels.forEach(panel => {
+    panel.addEventListener('click', event => {
+      event.stopPropagation();
+    });
+  });
+});
 
 // <ul class="accord">
 //   <li class="ac">

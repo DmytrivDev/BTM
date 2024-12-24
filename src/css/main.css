@@ -27,6 +27,7 @@
 @import url('./sections/home/audience.scss');
 @import url('./sections/home/ambass.scss');
 @import url('./sections/home/receive.scss');
+@import url('./sections/home/faq.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
