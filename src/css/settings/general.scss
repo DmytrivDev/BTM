@@ -29,6 +29,9 @@ body {
   max-width: 80rem;
   padding: 0 2.5em;
   margin: 0 auto;
+  &.wide {
+    max-width: 95rem;
+  }
 }
 
 /* --------- Adaptive desktop (1520px) --------- */
@@ -36,7 +39,7 @@ body {
 @media screen and (max-width: 1520px) {
   html,
   body {
-    font-size: 1vw;
+    font-size: 1.05vw;
   }
 }
 

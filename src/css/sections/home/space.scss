@@ -1,63 +1,76 @@
 .space {
-	padding-top: 7.5rem;
+  padding-top: 7.5rem;
 
-	&__container {
-		max-width: 95rem;
-	}
-	&__body {
-		position: relative;
-		padding: 6.875rem 7.5rem 6.25rem 7.5rem;
-		border-radius: 4.375rem;
-		background-color: var(--cw2);
-	}
+  &__container {
+  }
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    position: relative;
+    z-index: 5;
+    padding: 6.875rem 7.5rem 6.25rem 7.5rem;
+    border-radius: 4.375rem;
+    background-color: var(--cw2);
+  }
 
-	&__dec {
-		position: absolute;
-		top: 0;
-		left: 7.5rem;
-		transform: translateY(-50%);
-		width: 7.875rem;
-		img {
-			width: 100%;
-		}
-	}
+  &__heading {
+    margin-bottom: 3.25rem;
+    padding-right: 18.75rem;
+  }
 
-	&__heading {
-		margin-bottom: 3.25rem;
-		padding-right: 18.75rem;
-	}
-
-	&__content {
-		display: flex;
-		align-items: start;
-		gap: 0 5rem;
-		& > .txt-def {
-			flex-shrink: 0;
-			width: 30rem;
-		}
-	}
-	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2.3125rem 5rem;
-		li {
-			flex-basis: calc((100% - 1 * 5rem) / 2);
-			& > span {
-				display: block;
-				width: 2.75rem;
-				margin-bottom: 1.25rem;
-				img {
-					width: 100%;
-				}
-			}
-			.tl4 {
-				margin-bottom: 1.25rem;
-			}
-		}
-	}
+  &__content {
+    display: flex;
+    align-items: start;
+    gap: 0 5rem;
+    & > .txt-def {
+      flex-shrink: 0;
+      width: 30rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.3125rem 5rem;
+    li {
+      flex-basis: calc((100% - 1 * 5rem) / 2);
+      & > span {
+        display: block;
+        width: 2.75rem;
+        margin-bottom: 1.25rem;
+        img {
+          width: 100%;
+        }
+      }
+      .tl4 {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+  
+  &__fltr1,
+  &__fltr2 {
+    position: absolute;
+    z-index: -1;
+    width: 73.3425rem;
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+  &__fltr1 {
+    top: -53.9525rem;
+    left: -8.765rem;
+    transform: rotate(-120deg);
+  }
+  &__fltr2 {
+    left: 2.11rem;
+    bottom: -47.89rem;
+    transform: rotate(-300deg);
+  }
 }
 
 @media screen and (max-width: 960px) {
-	.space {
-	}
+  .space {
+  }
 }

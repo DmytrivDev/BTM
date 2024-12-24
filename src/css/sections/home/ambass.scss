@@ -1,9 +1,15 @@
 .ambass {
   padding-top: 8.4375rem;
+  margin-bottom: -20.1875rem;
 
   &__container {
   }
+  &__wrapp {
+    position: relative;
+  }
   &__body {
+    position: relative;
+    z-index: 5;
   }
 
   &__heading {
@@ -73,6 +79,19 @@
     flex-direction: column;
     gap: 1.0625rem 0;
     margin-bottom: 1.0625rem;
+  }
+
+  &__fltr {
+    position: absolute;
+    z-index: -1;
+    left: -5.39rem;
+    bottom: 4.64rem;
+    width: 73.3425rem;
+    transform: rotate(-135deg);
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
   }
 }
 

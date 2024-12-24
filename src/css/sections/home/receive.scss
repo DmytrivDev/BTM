@@ -1,0 +1,74 @@
+.receive {
+  padding: 28rem 0 12.1875rem 0;
+  padding-top: 28rem;
+  padding-bottom: 12.1875rem;
+  background-color: var(--co);
+  border-radius: 4.375rem;
+
+  &__container {
+  }
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    position: relative;
+    z-index: 5;
+    border-radius: 4.375rem;
+    border: 0.0625rem solid var(--cw2);
+    background-color: rgba(253, 180, 129, 0.6);
+    box-shadow: 0 4rem 8.375rem 0 rgba(0, 0, 0, 0.1);
+    padding: 6.4375rem 7.5rem;
+    display: grid;
+    grid-template-columns: 27.9375rem 1fr;
+    align-items: start;
+    gap: 0 6.875rem;
+  }
+
+  &__heading {
+    position: sticky;
+    top: 6.4375rem;
+    .tl2 {
+      margin-bottom: 2.875rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.8125rem 4.8125rem;
+    li {
+      flex-basis: calc((100% - 1 * 4.8125rem) / 2);
+      & > span {
+        display: block;
+        width: 2.75rem;
+        margin-bottom: 1.25rem;
+        img {
+          width: 100%;
+        }
+      }
+      .tl4 {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  &__fltr {
+    position: absolute;
+    top: 8.6875rem;
+    left: 1.5625rem;
+    width: 88.3125rem;
+    transform: rotate(30deg);
+    filter: blur(7.3125rem);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.btn-def {
+}
+
+@media screen and (max-width: 960px) {
+  .receive {
+  }
+}
