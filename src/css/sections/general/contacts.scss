@@ -1,10 +1,7 @@
 .contacts {
+  position: relative;
+  z-index: -1;
   padding-top: 2.5rem;
-  &__container {
-    &.wide {
-      max-width: 98.75rem;
-    }
-  }
 
   &__heading {
     margin-bottom: -2.6875rem;
@@ -19,7 +16,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 9.6875rem;
-    padding: 7.8125rem 9.375rem 4.5rem 9.375rem;
+    padding: 7.8125rem 7.5rem 4.5rem 7.5rem;
     border-radius: 4.375rem;
     border: 0.0625rem solid var(--cw2);
     background-color: rgba(0, 200, 163, 0.1);
