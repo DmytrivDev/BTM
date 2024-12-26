@@ -1,3 +1,12 @@
+.tl1,
+.tl2,
+.tl3,
+.tl4 {
+  &.cw {
+    color: var(--cw);
+  }
+}
+
 .tl1 {
   font-family: var(--ff3);
   font-weight: 600;
@@ -10,9 +19,6 @@
   font-weight: 400;
   font-size: 5.625rem;
   line-height: 0.87778;
-  &.cw {
-    color: var(--cw);
-  }
 }
 .tl3 {
   font-family: var(--ff2);
@@ -25,9 +31,6 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 1.21875;
-  &.cw {
-    color: var(--cw);
-  }
 }
 
 .txt-def {
