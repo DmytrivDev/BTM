@@ -1,8 +1,5 @@
 .banner {
-  padding: 4rem 0;
-
-  &__carousell {
-    padding: 1rem 0;
+  &__carousel {
     display: flex;
     align-items: center;
     width: 100%;
@@ -18,8 +15,8 @@
     align-items: center;
     white-space: nowrap;
     flex-wrap: nowrap;
-    gap: 0 2rem;
-    width: 100%;
+    gap: 5.625rem;
+    min-width: 100%;
     will-change: transform;
 
     &.carsePartF {
@@ -32,8 +29,7 @@
     }
   }
   &__item {
-  }
-  &__box {
+    flex-shrink: 0;
   }
 }
 
@@ -44,10 +40,9 @@
     -ms-transform: translateX(calc(100% + var(--moveP)));
   }
   100% {
-    // -Num.rem це gap - .banner__list * 2
-    transform: translateX(calc(-100% + var(--moveM) - 4rem));
-    -webkit-transform: translateX(calc(-100% + var(--moveM) - 4rem));
-    -ms-transform: translateX(calc(-100% + var(--moveM) - 4rem));
+    transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
+    -webkit-transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
+    -ms-transform: translateX(calc(-100% + var(--moveM) - var(--gap)));
   }
 }
 
@@ -58,18 +53,15 @@
     -ms-transform: translateX(var(--moveP));
   }
   100% {
-    // -Num.rem це gap - .banner__list * 2
-    transform: translateX(calc(-200% + var(--moveM) - 4rem));
-    -webkit-transform: translateX(calc(-200% + var(--moveM) - 4rem));
-    -ms-transform: translateX(calc(-200% + var(--moveM) - 4rem));
+    transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
+    -webkit-transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
+    -ms-transform: translateX(calc(-200% + var(--moveM) - var(--gap)));
   }
 }
 
 @media screen and (max-width: 960px) {
   .banner {
-    padding: 3rem 0 1.5rem 0;
-
-    &__carousell {
+    &__carousel {
       &:hover {
         .banner__list {
           animation-play-state: running !important;
@@ -78,35 +70,7 @@
       }
     }
     &__list {
-      gap: 0 1rem;
-    }
-  }
-
-  @keyframes animateF {
-    0% {
-      transform: translateX(calc(100% + var(--moveP)));
-      -webkit-transform: translateX(calc(100% + var(--moveP)));
-      -ms-transform: translateX(calc(100% + var(--moveP)));
-    }
-    100% {
-      // -Num.rem це gap - .banner__list * 2
-      transform: translateX(calc(-100% + var(--moveM) - 2rem));
-      -webkit-transform: translateX(calc(-100% + var(--moveM) - 2rem));
-      -ms-transform: translateX(calc(-100% + var(--moveM) - 2rem));
-    }
-  }
-
-  @keyframes animateS {
-    0% {
-      transform: translateX(var(--moveP));
-      -webkit-transform: translateX(var(--moveP));
-      -ms-transform: translateX(var(--moveP));
-    }
-    100% {
-      // -Num.rem це gap - .banner__list * 2
-      transform: translateX(calc(-200% + var(--moveM) - 2rem));
-      -webkit-transform: translateX(calc(-200% + var(--moveM) - 2rem));
-      -ms-transform: translateX(calc(-200% + var(--moveM) - 2rem));
+      gap: 3.125rem;
     }
   }
 }

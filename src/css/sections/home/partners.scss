@@ -1,0 +1,26 @@
+.partners {
+  position: relative;
+  z-index: 5;
+  padding-top: 6.5625rem;
+
+  &__heading {
+    .tl1 {
+      color: transparent;
+      -webkit-text-stroke-width: 0.1875rem;
+      -webkit-text-stroke-color: var(--cg);
+      margin-bottom: 4.6875rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 12.375rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .partners {
+  }
+}
