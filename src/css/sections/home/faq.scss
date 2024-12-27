@@ -1,4 +1,6 @@
 .faq {
+  position: relative;
+  z-index: 5;
   &__top {
     padding-top: 8rem;
     margin-bottom: -5rem;
