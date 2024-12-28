@@ -1,4 +1,5 @@
 import scrollLock from 'scroll-lock';
+import { pauseVideo } from './videoplay';
 
 const activeModals = new Set();
 const initializedModals = new WeakSet();
@@ -7,6 +8,7 @@ function showModal(modal) {
   modal.classList.add('isOpened', 'isAnimation');
   scrollLock.disablePageScroll(modal, { reserveScrollBarGap: true });
   activeModals.add(modal);
+  pauseVideo();
 }
 
 export function closeModal(modal) {
@@ -73,4 +75,5 @@ document.addEventListener('keydown', event => {
     if (lastModal) closeModal(lastModal);
   }
 });
+
 document.addEventListener('DOMContentLoaded', initOpenModal);

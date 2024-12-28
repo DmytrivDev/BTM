@@ -13,6 +13,8 @@
   &__list {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
     white-space: nowrap;
     flex-wrap: nowrap;
     gap: 5.625rem;

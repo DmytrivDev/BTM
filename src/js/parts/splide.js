@@ -1,4 +1,5 @@
 import { initSlider } from './splidecust';
+import { pauseVideo } from './videoplay';
 
 const ambassSplide = document.querySelector('.ambass');
 if (ambassSplide) {
@@ -11,6 +12,28 @@ if (ambassSplide) {
     },
   });
 }
+
+let reviewsSliderInstance;
+const reviewsSplide = document.querySelector('.reviews');
+
+const initReviewsSlider = () => {
+  if (reviewsSplide && !reviewsSliderInstance) {
+    reviewsSliderInstance = initSlider(reviewsSplide, {
+      perPage: 1,
+      gap: '3.125rem',
+      breakpoints: {
+        960: {},
+        500: {},
+      },
+    });
+
+    reviewsSliderInstance?.on('move', () => {
+      pauseVideo();
+    });
+  }
+};
+
+document.addEventListener('DOMContentLoaded', initReviewsSlider);
 
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {

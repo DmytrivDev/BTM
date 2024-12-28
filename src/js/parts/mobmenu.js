@@ -1,4 +1,5 @@
 import scrollLock from 'scroll-lock';
+import { pauseVideo } from './videoplay';
 
 const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mobmenu');
@@ -23,6 +24,7 @@ function toggleMenu() {
     burger.classList.toggle('isOpened');
     mobMenu.classList.toggle('isOpened');
     toggleScrollLock();
+    pauseVideo();
   }
 }
 
