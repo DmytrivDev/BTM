@@ -4,12 +4,10 @@
   padding-top: 6.5625rem;
 
   &__heading {
-    .tl1 {
-      color: transparent;
-      -webkit-text-stroke-width: 0.1875rem;
-      -webkit-text-stroke-color: var(--cg);
-      margin-bottom: 4.6875rem;
-    }
+    margin-bottom: 3.9375rem;
+  }
+  &__tl {
+    max-width: 58.4375rem;
   }
 
   &__box {
@@ -22,5 +20,13 @@
 
 @media screen and (max-width: 960px) {
   .partners {
+    padding-top: 2.4375rem;
+
+    &__heading {
+      margin-bottom: 2.25rem;
+    }
+    &__tl {
+      max-width: 18.125rem;
+    }
   }
 }
