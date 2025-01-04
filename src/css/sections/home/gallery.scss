@@ -20,5 +20,17 @@
 
 @media screen and (max-width: 960px) {
   .gallery {
+    padding-top: 0;
+    gap: 0.9375rem;
+
+    &__box {
+      border-radius: 0.25rem;
+      padding-top: 66.84%;
+      width: 12.25rem;
+    }
+
+    .banner__list {
+      gap: 0.9375rem;
+    }
   }
 }

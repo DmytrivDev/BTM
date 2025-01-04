@@ -53,20 +53,11 @@ body {
   }
 
   [class*="__container"] {
-    padding: 0 1.25em;
+    padding: 0 0.9375em;
   }
 
   .main {
     padding-bottom: 3.125rem;
-  }
-}
-
-/* --------- Adaptive mobile (500px) --------- */
-
-@media screen and (max-width: 500px) {
-  html,
-  body {
-    font-size: 16px;
   }
 }
 

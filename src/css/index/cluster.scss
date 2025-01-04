@@ -50,7 +50,32 @@
 }
 
 @media screen and (max-width: 960px) {
-  .class {
+  .arrows {
+    width: 100%;
+    &__body {
+      justify-content: space-between;
+    }
+
+    &__next,
+    &__prev {
+      background-color: var(--cy);
+      border-radius: 0.9375rem;
+      padding: 0.75rem;
+      &::before {
+        width: 1rem;
+        height: 1rem;
+        background-size: 1rem 1rem;
+        background-image: var(--arrSlideRightB);
+      }
+      &.isDisabled {
+        &:hover {
+          background-color: var(--cy);
+          &::before {
+            background-image: var(--arrSlideRightB);
+          }
+        }
+      }
+    }
   }
 }
 

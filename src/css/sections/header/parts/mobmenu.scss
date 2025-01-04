@@ -6,23 +6,32 @@
   .mobmenu {
     display: block;
     position: absolute;
-    top: -100%;
+    top: 100%;
     left: 0;
     right: 0;
     z-index: 100;
     width: 100%;
     height: calc(100vh - 100%);
-    background-color: var(--cw);
-    transform: translateY(-100%);
+    background-color: var(--cl);
+    transform: translateX(-100%);
 
-    transition: all 0.35s ease-in;
-    -webkit-transition: all 0.35s ease-in;
-    -o-transition: all 0.35s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
     -webkit-overflow-scrolling: touch;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background-color: var(--cl);
+      width: 100%;
+      height: 100%;
+    }
+
     &.isOpened {
-      transform: translateY(0);
-      top: 100%;
+      transform: translateX(0);
     }
 
     &__body {
@@ -34,10 +43,5 @@
       display: flex;
       flex-direction: column;
     }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .mobmenu {
   }
 }

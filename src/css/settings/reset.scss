@@ -57,5 +57,14 @@
 
 @media screen and (max-width: 960px) {
   .wrapper {
+    // ============== Accordion ==============
+    .ac {
+      [class*="__head"] {
+        gap: 0.625rem;
+        &::after {
+          top: 0.1875rem;
+        }
+      }
+    }
   }
 }

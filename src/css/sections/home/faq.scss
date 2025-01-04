@@ -1,8 +1,8 @@
 .faq {
   position: relative;
   z-index: 5;
+  padding-top: 8rem;
   &__top {
-    padding-top: 8rem;
     margin-bottom: -5rem;
   }
   &__body {
@@ -13,9 +13,6 @@
       rgba(255, 255, 255, 0.2) 0%,
       rgba(255, 255, 255, 0) 100%
     );
-  }
-
-  &__heading {
   }
 
   &__accord {
@@ -53,7 +50,7 @@
       }
     }
     .txt-def {
-      padding: 0 3.875rem 1.875rem 1.875rem;
+      padding: 0 1.875rem 1.875rem 1.875rem;
     }
 
     &.is-active {
@@ -64,9 +61,6 @@
         &::after {
           transform: rotate(0);
         }
-        &::before {
-          height: 0;
-        }
       }
     }
   }
@@ -74,5 +68,39 @@
 
 @media screen and (max-width: 960px) {
   .faq {
+    padding-top: 1.6875rem;
+    &__top {
+      margin-bottom: -2.5625rem;
+    }
+    &__body {
+      padding-top: 5rem;
+      border-radius: 0.9375rem 0.9375rem 0 0;
+    }
+
+    &__accord {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 0.625rem 0;
+    }
+    &__list {
+      gap: 0.625rem 0;
+    }
+
+    .ac {
+      border-radius: 0.75rem;
+      padding-bottom: 15px;
+      padding-bottom: 10px;
+      padding-bottom: 0.3125rem;
+
+      .faq__head {
+        padding: 0.9375rem 0.9375rem 0.625rem 0.9375rem;
+        &::before {
+          height: 0.3125rem;
+        }
+      }
+      .txt-def {
+        padding: 0 0.9375rem 0.625rem 0.9375rem;
+      }
+    }
   }
 }
