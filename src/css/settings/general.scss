@@ -63,9 +63,17 @@ body {
 
 /* --------- Adaptive mobile (375px) --------- */
 
-@media screen and (max-width: 375px) {
+// @media screen and (max-width: 375px) {
+//   html,
+//   body {
+//     font-size: 4.27vw;
+//   }
+// }
+
+/* --------- Adaptive mobile (320px) --------- */
+@media screen and (max-width: 320px) {
   html,
   body {
-    font-size: 4.27vw;
+    font-size: 4.97vw;
   }
 }

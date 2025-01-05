@@ -8,7 +8,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.9375rem 1.875rem;
-      & > li {
+      & > li,
+      .menu-item {
         overflow: hidden;
         padding: 0.35rem 0;
         &.current-menu-item {
@@ -20,7 +21,7 @@
             }
           }
         }
-        & > a {
+        a {
           position: relative;
           font-weight: 700;
           font-size: 0.75rem;
@@ -107,13 +108,14 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5625rem 0;
-        & > li {
+        & > li,
+        .menu-item {
           &.current-menu-item {
             & > a {
               color: var(--cy);
             }
           }
-          & > a {
+          a {
             font-weight: 700;
             color: var(--cw);
             text-align: center;
