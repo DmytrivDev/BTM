@@ -22,8 +22,9 @@ const initReviewsSlider = () => {
       perPage: 1,
       gap: '3.125rem',
       breakpoints: {
-        960: {},
-        500: {},
+        960: {
+          gap: '1.875rem',
+        },
       },
     });
 

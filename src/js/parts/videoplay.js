@@ -17,20 +17,25 @@ const playVideo = async videoElement => {
 const videos = document.querySelectorAll('.reviews-video');
 
 videos?.forEach(videoItem => {
-  videoItem.addEventListener('click', function () {
-    const video = videoItem.querySelector('video');
+  const arrows = videoItem.querySelector('.arrows');
+  const videoBox = videoItem.querySelector('.reviews__video');
+  const btnPlay = videoItem.querySelector('.video-play');
+  const video = videoItem.querySelector('video');
 
+  function checkActiveVideo() {
     if (video !== activeVideo) {
-      const button = videoItem.querySelector('.video-play');
-
-      if (button) {
-        button.style.display = 'none';
+      if (btnPlay) {
+        arrows.style.display = 'none';
+        btnPlay.style.display = 'none';
         videoItem.classList.add('bg-hidd');
       }
 
       playVideo(video);
     }
-  });
+  }
+
+  videoBox.addEventListener('click', checkActiveVideo);
+  btnPlay.addEventListener('click', checkActiveVideo);
 });
 
 export function pauseVideo() {
