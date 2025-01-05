@@ -13,7 +13,7 @@
     width: 100%;
     height: calc(100vh - 100%);
     background-color: var(--cl);
-    transform: translateX(-100%);
+    transform: translateX(100%);
 
     transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
