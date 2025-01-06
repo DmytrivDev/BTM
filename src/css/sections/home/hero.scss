@@ -70,16 +70,6 @@
 
   &__fltr1 {
     position: absolute;
-    z-index: -2;
-    left: -4.8125rem;
-    bottom: -19.4375rem;
-    width: 28.1875rem;
-    img {
-      width: 100%;
-    }
-  }
-  &__fltr2 {
-    position: absolute;
     top: -42.3125rem;
     right: -31.3125rem;
     width: 69.875rem;
@@ -91,7 +81,7 @@
 
 @media screen and (max-width: 960px) {
   .hero {
-    padding-top: 5.3125rem;
+    padding-top: 4.4125rem;
 
     &__body {
       display: grid;
@@ -103,11 +93,13 @@
         font-size: 5.8125rem;
 
         &.wrd1 {
-          top: 0;
+          top: 0.9rem;
           font-size: 3.5rem;
           line-height: 0.90804;
         }
         &.wrd2 {
+          position: relative;
+          top: 0.3rem;
           font-size: 3.9375rem;
         }
       }
@@ -131,20 +123,14 @@
     }
 
     &__fltr1 {
-      left: -2.1681rem;
-      bottom: -0.0912rem;
-      width: 11rem;
-      transform: translateY(100%);
-    }
-    &__fltr2 {
-      top: -23.25rem;
+      top: -22.35rem;
       right: -14.8125rem;
       width: 27.875rem;
     }
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 575px) {
   .hero {
     &__body {
       grid-template-columns: 1fr;
