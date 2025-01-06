@@ -7,8 +7,17 @@ if (ambassSplide) {
     perPage: 4,
     gap: '1.875rem',
     breakpoints: {
-      960: {},
-      500: {},
+      960: {
+        perPage: 3,
+        gap: '0.875rem',
+        pagination: true,
+      },
+      675: {
+        perPage: 2,
+      },
+      475: {
+        perPage: 1,
+      },
     },
   });
 }

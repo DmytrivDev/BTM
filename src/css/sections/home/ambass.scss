@@ -2,8 +2,6 @@
   padding-top: 8.4375rem;
   margin-bottom: -20.1875rem;
 
-  &__container {
-  }
   &__wrapp {
     position: relative;
   }
@@ -18,7 +16,6 @@
   }
   &__subtl {
     font-family: var(--ff2);
-    font-weight: 400;
     font-size: 4.125rem;
     line-height: 1.49592;
     color: var(--cw);
@@ -43,7 +40,7 @@
 
   &__img {
     padding-top: 100%;
-    border-radius: 16px;
+    border-radius: 1rem;
     overflow: hidden;
   }
   &__activity {
@@ -51,8 +48,9 @@
     line-height: 1.35714;
   }
   &__link {
+    flex: 0 1 auto;
+    margin-top: auto;
     display: flex;
-    align-items: center;
     gap: 0 0.9375rem;
     font-weight: 700;
     font-size: 1.25rem;
@@ -93,9 +91,69 @@
       width: 100%;
     }
   }
+
+  .splide__slide {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 960px) {
   .ambass {
+    padding-top: 2.625rem;
+    margin-bottom: -19.625rem;
+
+    &__heading {
+      padding-right: 0;
+    }
+    &__subtl {
+      font-size: 2rem;
+      line-height: 1.0625;
+      margin-bottom: -0.25rem;
+    }
+    &__tl {
+      font-size: 2.875rem;
+      line-height: normal;
+    }
+
+    &__splide {
+      .arrows {
+        position: static;
+        transform: none;
+      }
+      .arrows__prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.625rem;
+      }
+      .arrows__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.625rem;
+      }
+    }
+
+    &__img {
+      border-radius: 0.75rem;
+    }
+    &__link {
+      font-size: 1.125rem;
+      line-height: 1.44444;
+    }
+
+    &__box {
+      gap: 0.75rem 0;
+      margin-bottom: 0.75rem;
+    }
+
+    &__fltr {
+      display: none;
+    }
+
+    .splide__track {
+      overflow: visible;
+    }
   }
 }
