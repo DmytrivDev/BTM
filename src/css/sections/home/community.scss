@@ -1,0 +1,15 @@
+.community {
+}
+
+.map__country {
+  &.is-select {
+    path {
+      fill: var(--co);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .community {
+  }
+}
