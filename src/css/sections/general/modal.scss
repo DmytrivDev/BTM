@@ -46,7 +46,7 @@
 
   &__body {
     flex: 0 0 auto;
-    margin: 4rem 0;
+    margin: 8rem 0;
     position: relative;
     background-color: var(--cw);
     border-radius: 1rem;
@@ -86,5 +86,27 @@
 
 @media screen and (max-width: 960px) {
   .modal {
+    &__body {
+      max-width: 27.5rem;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+    }
+
+    &__close {
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .modal {
+    &__container {
+      padding: 0;
+    }
+
+    &__body {
+      max-width: 20rem;
+    }
   }
 }
