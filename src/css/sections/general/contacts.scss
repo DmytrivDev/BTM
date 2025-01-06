@@ -69,6 +69,9 @@
     top: 0;
     left: 0;
 
+    &.fltr-mob {
+      display: none;
+    }
     div {
       &:nth-child(1) {
         position: absolute;
@@ -190,12 +193,6 @@
 
     &__container {
       padding: 0;
-      position: relative;
-      z-index: 10;
-
-      &.wide {
-        z-index: 9;
-      }
     }
 
     &__heading {
@@ -240,6 +237,11 @@
     }
     &__fltr2 {
       z-index: -2;
+      display: none;
+
+      &.fltr-mob {
+        display: block;
+      }
       div {
         &:nth-child(1) {
           top: 0.0256rem;
