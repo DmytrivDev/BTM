@@ -26,8 +26,8 @@
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      width: calc(100% - 0.125rem);
-      height: calc(100% - 0.125rem);
+      width: 100%;
+      height: 100%;
       backdrop-filter: blur(0.9375rem);
       border-radius: 4.375rem;
     }
@@ -186,5 +186,125 @@
 
 @media screen and (max-width: 960px) {
   .contacts {
+    padding-top: 3.125rem;
+
+    &__container {
+      padding: 0;
+      position: relative;
+      z-index: 10;
+
+      &.wide {
+        z-index: 9;
+      }
+    }
+
+    &__heading {
+      margin-bottom: -1.75rem;
+    }
+
+    &__body {
+      grid-template-columns: 1fr;
+      gap: 1.5625rem 0;
+      padding: 1.0625rem 0.9375rem 2.6875rem 0.9375rem;
+      border-radius: 0.9375rem;
+
+      &::before {
+        border-radius: 0.9375rem;
+      }
+    }
+
+    &__address {
+      .tl3 {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    &__form {
+      padding-right: 0;
+      .tl3 {
+        margin-bottom: 1rem;
+      }
+
+      .btn-def {
+        padding: 1.0938rem 2.4375rem;
+        border-radius: 1.25rem;
+      }
+    }
+
+    &__fltr1 {
+      right: -8.625rem;
+      left: auto;
+      bottom: -9.0625rem;
+      width: 23.6875rem;
+      filter: blur(4.0637rem);
+    }
+    &__fltr2 {
+      z-index: -2;
+      div {
+        &:nth-child(1) {
+          top: 0.0256rem;
+          left: -11.5587rem;
+          right: auto;
+          width: 20.86619rem;
+          height: 22.44956rem;
+          border-radius: 22.44956rem;
+          filter: blur(5.9913rem);
+        }
+        &:nth-child(2) {
+          top: -3.6637rem;
+          left: -15.5388rem;
+          right: auto;
+          width: 23.40819rem;
+          height: 22.44956rem;
+          border-radius: 23.40819rem;
+          filter: blur(4.3746rem);
+        }
+        &:nth-child(3) {
+          top: -4.4rem;
+          left: -5.1338rem;
+          right: auto;
+          width: 16.8163rem;
+          height: 19.3294rem;
+          border-radius: 19.32956rem;
+          filter: blur(4.3746rem);
+        }
+      }
+    }
+  }
+
+  .address {
+    &__box {
+      & > p {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+      }
+      & > a {
+        font-size: 1.125rem;
+        align-items: center;
+        line-height: 1.44444;
+
+        & > span {
+          top: 0;
+          width: 1.125rem;
+        }
+        &:hover {
+          color: var(--cw);
+        }
+      }
+    }
+  }
+
+  .form {
+    gap: 1rem 0;
+
+    .label__def {
+      input,
+      textarea {
+        padding: 0.7813rem 0.6875rem;
+      }
+      textarea {
+        padding: 0.9375rem;
+      }
+    }
   }
 }

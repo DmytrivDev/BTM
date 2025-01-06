@@ -62,14 +62,6 @@
 
 @media screen and (max-width: 960px) {
   .banner {
-    &__carousel {
-      &:hover {
-        .banner__list {
-          animation-play-state: running !important;
-          -webkit-animation-play-state: running !important;
-        }
-      }
-    }
     &__list {
       gap: 3.6719rem;
     }

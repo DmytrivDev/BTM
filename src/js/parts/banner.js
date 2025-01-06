@@ -21,7 +21,7 @@ function initCalcSpeedCarse() {
     const reverse = carousel.hasAttribute('data-reverse');
 
     const calcSpeed = (listWidthPartF / 1000) * speedFactor;
-    const speed = window.innerWidth > 960 ? calcSpeed : calcSpeed / 1.5;
+    const speed = window.innerWidth > 960 ? calcSpeed : calcSpeed / 1.25;
 
     const direction = reverse ? 'reverse' : 'normal';
 
