@@ -63,7 +63,7 @@
     line-height: 1.35714;
     font-weight: 700;
     float: none;
-    padding: 0.75rem 0.9375rem;
+    padding: 0.625rem 0.8125rem;
     width: 100%;
 
     &::after {
@@ -123,7 +123,7 @@
     }
     .option {
       line-height: inherit;
-      padding: 0.3125rem 0.9375rem;
+      padding: 0.3125rem 0.8125rem;
       text-wrap: wrap;
       font-weight: inherit;
       &:hover {
@@ -131,7 +131,7 @@
         color: var(--co);
       }
       &:last-child {
-        padding-bottom: 0.75rem;
+        padding-bottom: 0.625rem;
       }
       &.focus {
         background-color: var(--cw);
