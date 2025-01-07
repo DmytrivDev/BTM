@@ -226,12 +226,6 @@
       margin-bottom: 0.875rem;
     }
 
-    &__cards {
-      flex-wrap: nowrap;
-      flex-direction: column;
-      align-items: center;
-    }
-
     &__pagin {
       margin-top: 1.875rem;
 
@@ -338,11 +332,10 @@
     flex: 1 1 auto;
     border-radius: 0.75rem;
     flex-basis: 100%;
-    width: 100%;
-    max-width: 29.6875rem;
 
     &__img {
       border-radius: 0.75rem;
+      padding-top: 45%;
     }
 
     &__aside {
@@ -375,6 +368,14 @@
           font-size: 0.875rem;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card-def {
+    &__img {
+      padding-top: 100%;
     }
   }
 }
