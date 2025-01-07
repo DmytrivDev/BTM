@@ -7,3 +7,5 @@ import './parts/splide.js';
 import './parts/forms.js';
 import './parts/scroll.js';
 import './parts/videoplay.js';
+import './parts/filtermodal.js';
+import './parts/select.js';
