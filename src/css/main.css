@@ -22,6 +22,7 @@
 
 /* Modal */
 @import url('./sections/modals/evidence.scss');
+@import url('./sections/modals/signup.scss');
 
 /* Home */
 @import url('./sections/home/hero.scss');
@@ -33,6 +34,10 @@
 @import url('./sections/home/community.scss');
 @import url('./sections/home/gallery.scss');
 @import url('./sections/home/reviews.scss');
+@import url('./sections/home/subscribe.scss');
+@import url('./sections/home/stages.scss');
+@import url('./sections/home/plans.scss');
+@import url('./sections/home/join.scss');
 @import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');
 
