@@ -1,4 +1,6 @@
 .plans {
+  position: relative;
+  z-index: 4;
 }
 
 @media screen and (max-width: 960px) {
