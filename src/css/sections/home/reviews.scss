@@ -193,12 +193,16 @@
     }
 
     .reviews-post {
-      grid-template-columns: 18.125rem 1fr;
-      align-items: center;
-      padding: 0.9375rem;
-      gap: 0.9375rem;
+      padding: 0;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 1.25rem;
+      .reviews__content {
+        padding: 0 0.9375rem 0.9375rem 0.9375rem;
+      }
     }
     &__img {
+      padding-top: 45%;
       border-radius: 0.75rem;
     }
     &__content {
@@ -283,14 +287,8 @@
       }
     }
 
-    .reviews-post {
-      padding: 0;
-      grid-template-columns: 1fr;
-      align-items: stretch;
-      gap: 1.25rem;
-      .reviews__content {
-        padding: 0 0.9375rem 0.9375rem 0.9375rem;
-      }
+    &__img {
+      padding-top: 100%;
     }
 
     .reviews-video {
