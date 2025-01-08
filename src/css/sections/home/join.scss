@@ -65,10 +65,9 @@
     z-index: 4;
     top: 0;
     left: 0;
-    width: calc(100% + 10rem);
+    width: calc(100% + 15rem);
     height: 100%;
     overflow: hidden;
-    border-radius: 4.375rem;
   }
   &__gallery1,
   &__gallery2 {
@@ -87,7 +86,7 @@
     }
   }
   &__gallery1 {
-    right: calc(10rem - 9.4375rem - 2.0625rem);
+    right: calc(15rem - 9.4375rem - 2.0625rem);
     width: calc(55.5212rem + 4.125rem);
     height: calc(55.5212rem + 4.125rem);
     animation: rotateGallery1eBig 20s linear infinite;
@@ -138,7 +137,7 @@
     }
   }
   &__gallery2 {
-    right: calc(10rem - 3.5625rem - 2.0625rem);
+    right: calc(15rem - 3.5625rem - 2.0625rem);
     width: calc(43.68881rem + 4.125rem);
     height: calc(43.68881rem + 4.125rem);
     animation: rotateGallery1eSmall 20s linear infinite;
