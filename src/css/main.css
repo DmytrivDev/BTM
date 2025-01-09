@@ -41,5 +41,8 @@
 @import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');
 
+/* Thank */
+@import url('./sections/thank/thank.scss');
+
 /* Footer */
 @import url('./sections/footer/footer.scss');
