@@ -41,6 +41,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5625rem;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: all 0.15s ease-in;
+
+    &.is-hidden {
+      display: none;
+    }
+    &.is-visible {
+      opacity: 1;
+      overflow: visible;
+    }
   }
 }
 

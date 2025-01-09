@@ -2,17 +2,17 @@
   <div class="plans__period">
     <div class="plans__box">
       <label>
-        <input type="radio" name="period" checked />
+        <input type="radio" name="period" value="3" checked />
         <p>3 month</p>
       </label>
       <label>
-        <input type="radio" name="period" />
+        <input type="radio" name="period" value="6" />
         <p>6 month</p>
       </label>
     </div>
   </div>
 
-  <ul class="plans__cards">
+  <ul class="plans__cards plansThree is-visible">
     <li class="card-plan" id="basic">
       <h3 class="card-plan__name">Basic</h3>
       <p class="card-plan__discount">86$</p>
@@ -65,6 +65,81 @@
       <h3 class="card-plan__name">VIP</h3>
       <p class="card-plan__discount">303$</p>
       <h4 class="card-plan__price tl3">246$<span>/mon</span></h4>
+      <p class="card-plan__options">
+        The package includes the following options:
+      </p>
+      <ul class="card-plan__list">
+        <li>All options from the Standart package;</li>
+        <li>
+          Individual support from a coach according to your professional
+          request;
+        </li>
+        <li>Monthly meetings with mentors and discussion of results;</li>
+        <li>Constant support;</li>
+        <li>Priority for participation in narrow-profile offline events;</li>
+        <li>
+          50% discount on participation in profile conferences.<br />
+          (IT HR Forum, HR Marketing Conference, IT HR Awards)
+        </li>
+      </ul>
+      <button type="button" class="btn-def openModal" data-id="idSignup">
+        Become a member
+      </button>
+    </li>
+  </ul>
+  <ul class="plans__cards plansSix is-hidden">
+    <li class="card-plan" id="basic">
+      <h3 class="card-plan__name">Basic</h3>
+      <p class="card-plan__discount">106$</p>
+      <h4 class="card-plan__price tl3">56$<span>/mon</span></h4>
+      <p class="card-plan__options">
+        The package includes the following options:
+      </p>
+      <ul class="card-plan__list">
+        <li>Участь у онлайн зустрічах, мастер-класах, практичних воркшопах;</li>
+        <li>Відеозаписи зустрічей;</li>
+        <li>
+          Додаткові матеріали;<br />
+          (посилання, чек-листи, шаблони)
+        </li>
+        <li>Доступ до закритих тематичних груп ком’юніті.</li>
+      </ul>
+      <button type="button" class="btn-def openModal" data-id="idSignup">
+        Become a member
+      </button>
+    </li>
+    <li class="card-plan is-checked" id="standart">
+      <h3 class="card-plan__name">Standart</h3>
+      <p class="card-plan__discount">123$</p>
+      <h4 class="card-plan__price tl3">109$<span>/mon</span></h4>
+      <p class="card-plan__options">
+        The package includes the following options:
+      </p>
+      <ul class="card-plan__list">
+        <li>All options from the Basic package;</li>
+        <li>
+          Participation in offline events;<br />
+          (Kyiv, Kharkiv, Lviv, Odesa, Dnipro)
+        </li>
+        <li>
+          Mentoring support;<br />
+          (1 consultation from a mentor per month)
+        </li>
+        <li>Company tours and meetings with colleagues and management;</li>
+        <li>
+          Special conditions for participation in specialized conferences;<br />
+          (IT HR Forum, HR Marketing Conference, IT HR Awards)
+        </li>
+        <li>Constant help and support from thematic curators in chats.</li>
+      </ul>
+      <button type="button" class="btn-def openModal" data-id="idSignup">
+        Become a member
+      </button>
+    </li>
+    <li class="card-plan" id="VIP">
+      <h3 class="card-plan__name">VIP</h3>
+      <p class="card-plan__discount">323$</p>
+      <h4 class="card-plan__price tl3">266$<span>/mon</span></h4>
       <p class="card-plan__options">
         The package includes the following options:
       </p>
