@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/BTM",
+    "build": "vite build --base=/BTM/",
     "preview": "vite preview"
   },
   "devDependencies": {
