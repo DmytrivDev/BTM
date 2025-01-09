@@ -28,7 +28,7 @@ function toggleMenu() {
   }
 }
 
-function closeMenu() {
+export function closeMenu() {
   if (burger && mobMenu) {
     burger.classList.remove('isOpened');
     mobMenu.classList.remove('isOpened');
