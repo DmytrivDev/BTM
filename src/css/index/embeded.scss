@@ -4,8 +4,6 @@
   color: var(--cm);
 
   & > * {
-    margin-top: 0.75em;
-
     &:first-child {
       margin-top: 0;
     }
@@ -23,47 +21,44 @@
     text-decoration-thickness: 1px !important;
   }
 
-  b {
-    display: block;
-    font-size: 1.125em;
-    font-weight: 500;
-    line-height: 1.556em;
-    margin-top: 1em;
-  }
-
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h2,
-  h3 {
-    font-size: 1.25em;
-    line-height: 1.7em;
-    margin-top: 1em;
-    margin-bottom: 0.75em;
-  }
-
-  h4,
-  h5,
-  h6 {
+  h3,
+  h4 {
     font-size: 1em;
-    line-height: 1.6em;
-    margin-top: 1em;
-    margin-bottom: 0.75em;
+    line-height: 1.5em;
+    margin-top: 1.375em;
+    margin-bottom: 1.375em;
   }
 
+  & > ul {
+    & > li {
+      &::before {
+        display: none;
+      }
+    }
+  }
   ul {
-    margin-left: 1em;
-
-    li {
-      margin-bottom: 1em;
-      margin-left: 0.5em;
-      list-style: disc;
+    & > li {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.75rem;
+        left: -0.75rem;
+        width: 0.1875rem;
+        height: 0.1875rem;
+        border-radius: 50%;
+        background-color: var(--cm);
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -72,11 +67,10 @@
   }
 
   ol {
-    padding-left: 1em;
+    padding-left: 1.125em;
     margin-left: 0;
 
-    li {
-      margin-bottom: 0.5em;
+    & > li {
       list-style: decimal;
       margin-left: 0;
 

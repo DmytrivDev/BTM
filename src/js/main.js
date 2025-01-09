@@ -10,3 +10,4 @@ import './parts/videoplay.js';
 import './parts/filtermodal.js';
 import './parts/select.js';
 import './parts/plans.js';
+import './parts/sidebar.js';

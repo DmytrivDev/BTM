@@ -1,4 +1,88 @@
 .policy {
+  padding-top: 5.4375rem;
+
+  &__wrapp {
+    position: relative;
+  }
+  &__body {
+    position: relative;
+    padding: 6.875rem 7.5rem 6.25rem 7.5rem;
+    border-radius: 4.375rem;
+    background-color: var(--cw2);
+  }
+
+  &__heading {
+    margin-bottom: 4.625rem;
+  }
+
+  &__row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 16.25rem 1fr;
+    align-items: start;
+    gap: 0 11.0625rem;
+  }
+
+  &__box {
+    position: sticky;
+    top: 4rem;
+  }
+  &__nav {
+    display: none;
+  }
+  &__sidebar {
+    overflow-y: auto;
+    max-height: 14.25rem;
+    direction: rtl;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0.125rem;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--cl);
+      border-radius: 0;
+    }
+    .tabs {
+      padding-left: 1.875rem;
+      direction: ltr;
+      gap: 0;
+      li {
+        &:last-child {
+          a {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          display: none;
+          margin-bottom: 0.9375rem;
+        }
+        .none {
+          display: block;
+        }
+        .tab {
+          &.active {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &__embeded {
+  }
+  &__content {
+  }
+}
+.wide {
+}
+.ico-decor {
+}
+.no-select {
+}
+.tl2 {
+}
+.embeded {
 }
 
 @media screen and (max-width: 960px) {
