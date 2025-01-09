@@ -41,8 +41,8 @@ function handleResize() {
 function initMenu() {
   window.addEventListener('resize', handleResize);
 
-  filterOpen.addEventListener('click', openFilter);
-  filterClose.addEventListener('click', closeFilter);
+  filterOpen?.addEventListener('click', openFilter);
+  filterClose?.addEventListener('click', closeFilter);
 }
 
 document.addEventListener('DOMContentLoaded', initMenu);
