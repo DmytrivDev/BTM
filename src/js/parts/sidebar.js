@@ -19,7 +19,7 @@ function tabsSidebar(page) {
 
   let cl = 'active';
   titles.forEach((title, index) => {
-    cl = index > 0 ? 'none' : 'active';
+    cl = index >= 0 ? 'none' : 'active';
     const listItem = document.createElement('li');
     const link = document.createElement('a');
     link.className = `${cl} tab`;
@@ -42,19 +42,30 @@ function tabsSidebar(page) {
     const headers = Array.from(links).map((_, i) =>
       document.getElementById(`title-${i + 1}`)
     );
+    const policyRow = page.querySelector('.policy__row');
+    const policyBox = page.querySelector('.policy__box');
 
     const setActiveLink = function () {
       const scrollTop = window.scrollY;
-      const headerHeight = document.querySelector('.header').offsetHeight;
+      const computedStyle = window.getComputedStyle(policyBox);
+      const topValue = parseFloat(computedStyle.top) || 0;
+      const distanceToHeader =
+        policyRow.getBoundingClientRect().top + scrollTop;
+      // const headerHeight = document.querySelector('.header').offsetHeight;
+
       let activeLink = links[0];
+
       headers.forEach((header, i) => {
-        if (scrollTop >= header.offsetTop - 0) {
+        if (scrollTop - distanceToHeader >= header.offsetTop - topValue - 114) {
           activeLink = links[i];
         }
       });
 
       links.forEach(link => link.classList.remove('active'));
       activeLink.classList.add('active');
+
+      // Прокручиваем родителя, чтобы активная ссылка была видна
+      smoothVerticalScroll(activeLink, 20);
     };
 
     setActiveLink();
@@ -65,18 +76,27 @@ function tabsSidebar(page) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      const headerHeight = document.querySelector('.header').offsetHeight;
+      const policyRow = page.querySelector('.policy__row');
+      const policyBox = page.querySelector('.policy__box');
+
+      const scrollTop = window.scrollY;
+      const computedStyle = window.getComputedStyle(policyBox);
+      const topValue = parseFloat(computedStyle.top) || 0;
+      const distanceToHeader =
+        policyRow.getBoundingClientRect().top + scrollTop;
+      // const headerHeight = document.querySelector('.header').offsetHeight;
+
       const href = this.getAttribute('href');
       const target = document.querySelector(href);
       if (!target) return;
 
-      let offset = target.offsetTop - 60;
+      let offset = target.offsetTop;
+      let ofF;
 
-      const head = headerHeight;
-      let ofF = offset;
+      const balance = window.innerWidth > 960 ? 1 : 113;
 
       if (this.classList.contains('tab')) {
-        ofF = offset - head;
+        ofF = offset + distanceToHeader - topValue - balance;
       }
 
       let topic = this.dataset.topic || this.textContent;
@@ -95,3 +115,39 @@ function tabsSidebar(page) {
     });
   });
 }
+
+// Кастомная функция для ускоренного вертикального скролла с центровкой
+function smoothVerticalScroll(element, duration) {
+  const container = document.querySelector('.policy__sidebar'); // Родительский контейнер
+  const containerHeight = container.offsetHeight;
+  const elementTop = element.offsetTop;
+  const elementHeight = element.offsetHeight;
+
+  // Расчет целевой позиции скролла
+  const targetScrollPosition =
+    elementTop - (containerHeight / 2 - elementHeight / 2);
+
+  let start = container.scrollTop;
+  let change = targetScrollPosition - start;
+  let currentTime = 0;
+  const increment = 1; // Ускорение (чем меньше, тем быстрее)
+
+  function animateScroll() {
+    currentTime += increment;
+    const val = Math.easeInOutQuad(currentTime, start, change, duration);
+    container.scrollTop = val;
+    if (currentTime < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  animateScroll();
+}
+
+// Функция для плавного эффекта
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t + b;
+  t--;
+  return (-c / 2) * (t * (t - 2) - 1) + b;
+};

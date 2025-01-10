@@ -135,16 +135,13 @@
 @media screen and (max-width: 960px) {
   .embeded {
     font-size: 0.875em;
-    line-height: 1.4em;
-
-    b {
-      font-size: 1em;
-      line-height: 1.45em;
-    }
 
     h2,
-    h3 {
+    h3,
+    h4 {
       font-size: 1em;
+      margin-top: 0.714em;
+      margin-bottom: 0.714em;
     }
 
     h4,
