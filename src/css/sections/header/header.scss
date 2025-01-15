@@ -1,11 +1,24 @@
 .header {
-  position: relative;
-  z-index: 5;
+  position: sticky;
+  top: 0;
+  z-index: 25;
+
+  &.isScroll {
+    .header__main {
+      background-color: var(--cl);
+      border-color: var(--cl3);
+    }
+  }
   &__main {
     position: relative;
     z-index: 110;
     background-color: transparent;
+    border: 0.0625rem solid transparent;
     padding: 1.875rem 0;
+
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
   }
   &__body {
     display: flex;
