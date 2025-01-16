@@ -10,19 +10,14 @@
 @import url('./index/elements.scss');
 @import url('./index/cluster.scss');
 
-/* General */
-@import url('./sections/general/modal.scss');
-@import url('./sections/general/banner.scss');
-@import url('./sections/general/contacts.scss');
-
 /* Header */
 @import url('./sections/header/header.scss');
 @import url('./sections/header/parts/navmenu.scss');
 @import url('./sections/header/parts/mobmenu.scss');
 
-/* Modal */
-@import url('./sections/modals/evidence.scss');
-@import url('./sections/modals/signup.scss');
+/* General */
+@import url('./sections/general/banner.scss');
+@import url('./sections/general/contacts.scss');
 
 /* Home */
 @import url('./sections/home/hero.scss');
@@ -40,6 +35,11 @@
 @import url('./sections/home/join.scss');
 @import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');
+
+/* Modal */
+@import url('./sections/general/modal.scss');
+@import url('./sections/modals/evidence.scss');
+@import url('./sections/modals/signup.scss');
 
 /* Thank */
 @import url('./sections/thank/thank.scss');
