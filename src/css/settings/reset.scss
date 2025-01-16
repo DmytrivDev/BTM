@@ -57,7 +57,7 @@
     gap: 0 0.625rem;
     background-color: transparent;
     border-radius: 0.75rem;
-    border: 0.125rem solid var(--co);
+    border: 2px solid var(--co);
     height: auto;
     font-size: 0.875rem;
     line-height: 1.35714;
@@ -110,8 +110,8 @@
     .nice-select-dropdown {
       transform: scale(0.9) translateY(-0.4375rem);
       overflow: hidden;
-      width: calc(100% + 0.25rem);
-      left: -0.125rem;
+      width: calc(100% + 4px);
+      left: -2px;
       box-shadow: none;
       border-radius: 0 0 0.75rem 0.75rem;
       margin-top: 0;
