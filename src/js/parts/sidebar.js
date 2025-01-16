@@ -84,7 +84,6 @@ function tabsSidebar(page) {
       const topValue = parseFloat(computedStyle.top) || 0;
       const distanceToHeader =
         policyRow.getBoundingClientRect().top + scrollTop;
-      // const headerHeight = document.querySelector('.header').offsetHeight;
 
       const href = this.getAttribute('href');
       const target = document.querySelector(href);

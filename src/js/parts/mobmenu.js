@@ -1,10 +1,13 @@
 import scrollLock from 'scroll-lock';
 import { pauseVideo } from './videoplay';
+import { closeFilter } from './filtermodal';
 
 const burger = document.querySelector('.burger');
 const mobMenu = document.querySelector('.mobmenu');
 const mobMenuBody = document.querySelector('.mobmenu__body');
-const mobNavLinks = document.querySelectorAll('.mobmenu .navmenu__list a');
+const mobNavLinks = document.querySelectorAll(
+  '.mobmenu .navmenu__list a, .btn-anchor'
+);
 
 let isScrollLocked = false;
 
@@ -25,6 +28,7 @@ function toggleMenu() {
     mobMenu.classList.toggle('isOpened');
     toggleScrollLock();
     pauseVideo();
+    closeFilter();
   }
 }
 

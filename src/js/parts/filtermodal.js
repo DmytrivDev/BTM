@@ -24,7 +24,7 @@ function openFilter() {
   }
 }
 
-function closeFilter() {
+export function closeFilter() {
   if (filterClose && filterWrapp) {
     filterWrapp.classList.remove('isOpened');
     if (filterWrapp) scrollLock.enablePageScroll(filterWrapp);
