@@ -16,14 +16,3 @@ faqList?.forEach(list => {
     });
   });
 });
-
-// <ul class="accord">
-//   <li class="ac">
-//     <div class="ac-trigger">
-//       <div class="__header"></div>
-//       <div class="ac-panel">
-//         <div class="__content"></div>
-//       </div>
-//     </div>
-//   </li>
-// </ul>
