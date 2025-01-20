@@ -12,7 +12,7 @@ export function addDataAmbass(modal, event) {
     connect: ambass.querySelector('.ambass__link')?.href || '#',
   };
 
-  modal.querySelector('.evidence__ava img').textContent = ambassData.ava;
+  modal.querySelector('.evidence__ava img').src = ambassData.ava;
   modal.querySelector('.evidence__tl').textContent = ambassData.name;
   modal.querySelector('.evidence__activity p').textContent =
     ambassData.activity;
