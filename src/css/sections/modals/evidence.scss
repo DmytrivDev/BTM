@@ -97,6 +97,7 @@
     }
     &__soc {
       ul {
+        justify-content: center;
         li {
           flex-basis: calc((100% - 1 * 0.9375rem) / 2);
 
