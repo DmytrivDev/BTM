@@ -2,6 +2,7 @@ import scrollLock from 'scroll-lock';
 
 import { pauseVideo } from './videoplay';
 import { closeMenu } from './mobmenu';
+import { addDataAmbass } from './ambass';
 
 const activeModals = new Set();
 const initializedModals = new WeakSet();
@@ -39,7 +40,7 @@ function initCloseModal(modal) {
   initializedModals.add(modal);
 }
 
-export function openModal(modalId) {
+export function openModal(modalId, event) {
   const modal = document.getElementById(modalId);
   if (modal) {
     activeModals.forEach(activeModal => {
@@ -55,6 +56,7 @@ export function openModal(modalId) {
     if (!modal.classList.contains('isOpened')) {
       pauseVideo();
       closeMenu();
+      addDataAmbass(modal, event);
       showModal(modal);
     }
   }
@@ -63,10 +65,10 @@ export function openModal(modalId) {
 function initOpenModal() {
   const btnsOpenModal = document.querySelectorAll('.openModal');
   btnsOpenModal.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', event => {
       const modalId = btn.dataset.id;
       if (modalId) {
-        openModal(modalId);
+        openModal(modalId, event);
       }
     });
   });

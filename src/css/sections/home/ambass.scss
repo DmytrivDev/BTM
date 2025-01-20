@@ -92,6 +92,13 @@
     }
   }
 
+  &__desc {
+    display: none;
+  }
+  &__soc {
+    display: none;
+  }
+
   .splide__slide {
     display: flex;
     flex-direction: column;
