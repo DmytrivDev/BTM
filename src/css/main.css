@@ -1,5 +1,5 @@
 /* Settings */
-/* @import url('./settings/fonts.scss'); */
+@import url('./settings/fonts.scss');
 @import url('./index/variables.scss');
 @import url('./index/icons.scss');
 @import url('./settings/default.scss');
@@ -18,6 +18,8 @@
 /* General */
 @import url('./sections/general/banner.scss');
 @import url('./sections/general/contacts.scss');
+@import url('./sections/general/partners.scss');
+@import url('./sections/general/media.scss');
 
 /* Home */
 @import url('./sections/home/hero.scss');
@@ -33,8 +35,16 @@
 @import url('./sections/home/stages.scss');
 @import url('./sections/home/plans.scss');
 @import url('./sections/home/join.scss');
-@import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');
+
+/* Event */
+@import url('./sections/event/event.scss');
+@import url('./sections/event/about.scss');
+@import url('./sections/event/commit.scss');
+@import url('./sections/event/speaker.scss');
+@import url('./sections/event/keys.scss');
+@import url('./sections/event/tickets.scss');
+@import url('./sections/event/connect.scss');
 
 /* Modal */
 @import url('./sections/general/modal.scss');
