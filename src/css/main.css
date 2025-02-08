@@ -18,8 +18,6 @@
 /* General */
 @import url('./sections/general/banner.scss');
 @import url('./sections/general/contacts.scss');
-@import url('./sections/general/partners.scss');
-@import url('./sections/general/media.scss');
 
 /* Home */
 @import url('./sections/home/hero.scss');
@@ -35,6 +33,7 @@
 @import url('./sections/home/stages.scss');
 @import url('./sections/home/plans.scss');
 @import url('./sections/home/join.scss');
+@import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');
 
 /* Event */
@@ -44,6 +43,8 @@
 @import url('./sections/event/speaker.scss');
 @import url('./sections/event/keys.scss');
 @import url('./sections/event/tickets.scss');
+@import url('./sections/event/event-partners.scss');
+@import url('./sections/event/media.scss');
 @import url('./sections/event/connect.scss');
 
 /* Modal */
