@@ -12,6 +12,7 @@
 
 /* Header */
 @import url('./sections/header/header.scss');
+@import url('./sections/headeralt/headeralt.scss');
 @import url('./sections/header/parts/navmenu.scss');
 @import url('./sections/header/parts/mobmenu.scss');
 
@@ -51,6 +52,7 @@
 @import url('./sections/general/modal.scss');
 @import url('./sections/modals/evidence.scss');
 @import url('./sections/modals/signup.scss');
+@import url('./sections/modals/registr.scss');
 
 /* Thank */
 @import url('./sections/thank/thank.scss');

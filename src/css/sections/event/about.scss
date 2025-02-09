@@ -1,5 +1,5 @@
 .about {
-  padding-top: 7.5rem;
+  padding-top: 8.3125rem;
 
   &__wrapp {
     position: relative;
@@ -7,43 +7,54 @@
   &__body {
     position: relative;
     z-index: 5;
-    padding: 6.875rem 7.5rem 6.25rem 7.5rem;
+    padding: 6.875rem 7.5rem 5.625rem 7.5rem;
     border-radius: 4.375rem;
     background-color: var(--cw2);
   }
 
-  &__heading {
-    margin-bottom: 3.25rem;
-    padding-right: 18.75rem;
-  }
-  &__subtitle {
-  }
-
   &__content {
-    display: flex;
-    align-items: start;
-    gap: 0 5rem;
-    & > .txt-def {
-      flex-shrink: 0;
-      width: 30rem;
+    padding-left: 10.5rem;
+  }
+  &__heading {
+    margin-bottom: 2.5625rem;
+
+    .tl2 {
+      position: relative;
+      margin-bottom: 2.0625rem;
+      span {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -1.125rem;
+        transform: translateX(-100%);
+      }
+    }
+    .tl3 {
+      line-height: 1.08696;
     }
   }
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.3125rem 5rem;
+    display: grid;
+    grid-template-columns: 22.5rem 13.75rem 20.3125rem;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 2.0625rem;
     li {
-      flex-basis: calc((100% - 1 * 5rem) / 2);
       & > span {
         display: block;
         width: 2.75rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.875rem;
         img {
           width: 100%;
         }
       }
-      .tl4 {
-        margin-bottom: 1.25rem;
+      .tl3 {
+        line-height: 1.08696;
+        margin-bottom: 1.75rem;
+      }
+      .txt-def {
+        font-size: 0.9375rem;
+        line-height: 1.53333;
       }
     }
   }

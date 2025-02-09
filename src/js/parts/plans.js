@@ -1,6 +1,6 @@
 const periodInputs = document.querySelectorAll('input[name="period"]');
 
-const plans = document.querySelectorAll('.plans__cards');
+const plans = document.querySelectorAll('.plans__cards, .tickets__cards');
 
 periodInputs?.forEach(input => {
   input.addEventListener('change', () => {

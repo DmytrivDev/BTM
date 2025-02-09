@@ -66,15 +66,20 @@
     line-height: 1.33333;
     &:hover {
       background-color: var(--cb);
-      color: var(--cy);
-      border-color: var(--cb);
+      border-color: transparent;
     }
   }
   &.trnspr {
     background-color: transparent;
     border-color: var(--cb);
     &:hover {
-      border-color: var(--cy);
+      background-color: var(--cb);
+    }
+  }
+  &.cl-bl {
+    background-color: var(--cb);
+    color: var(--cw);
+    &:hover {
       color: var(--cy);
     }
   }

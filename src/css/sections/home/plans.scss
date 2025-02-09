@@ -23,6 +23,7 @@
       }
       p {
         cursor: pointer;
+        text-align: center;
         min-width: 8.5625rem;
         padding: 1.0625rem 1.875rem;
         border-radius: 4.375rem;
@@ -102,6 +103,12 @@
       font-size: 1.6875rem;
     }
   }
+  &__term {
+    font-size: 0.75rem;
+    line-height: 1.41667;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
   &__options {
     font-weight: 700;
     font-size: 0.75rem;
@@ -122,10 +129,10 @@
       display: flex;
       align-items: start;
       gap: 0 0.5625rem;
-      position: relative;
-      top: 0.1875rem;
       &::before {
         content: "";
+        position: relative;
+        top: 0.125rem;
         flex-shrink: 0;
         width: 0.75rem;
         height: 0.75rem;
