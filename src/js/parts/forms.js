@@ -1,8 +1,15 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
 import isEmpty from 'validator/lib/isEmpty';
+
+import {
+  showModal,
+  closeModal,
+  initializedModals,
+  initCloseModal,
+} from './modal';
 
 const forms = document.querySelectorAll('.submitForm');
 
@@ -10,33 +17,54 @@ forms?.forEach(form => {
   form.addEventListener('submit', submitForm);
 });
 
-// async function sendForm(form) {
-//   const ajaxurl = '/wp-admin/admin-ajax.php';
-//   const headers = { 'Content-Type': 'multipart/form-data' };
-//   const myFormData = new FormData(form);
-//   const params = Object.fromEntries(myFormData.entries());
+async function sendForm(form) {
+  const ajaxurl = '/wp-admin/admin-ajax.php';
+  const headers = { "Content-Type": "multipart/form-data" };
+  const myFormData = new FormData(form);
+  const params = Object.fromEntries(myFormData.entries());
 
-//   try {
-//     const responce = await axios.get(ajaxurl, { params }, { headers });
-//     console.log(responce.data);
-//     if (responce.data !== 'error') {
-//       formEnd(form, true);
-//     } else {
-//       formEnd(form, false);
-//     }
-//   } catch (error) {
-//     formEnd(form, false);
-//   }
-// }
+  try {
+      const responce = await axios.get(ajaxurl, {params}, {headers});
+      if(responce.data !== 'error') {
+          formEnd(form, true);
+      } else {
+          formEnd(form, false);
+      }
+      
+  } catch(error) {
+      formEnd(form, false);
+  }
+}
 
 function formEnd(form, status) {
   if (status) {
-    const successUrl = form.data.success;
+    const successUrl = form.dataset.success;
 
-    window.location.href = successUrl;
+    if (successUrl) {
+      window.location.href = successUrl;
+    } else {
+      const successModal = document.getElementById('isSuccess');
+
+      if (!initializedModals.has(successModal)) {
+        initCloseModal(successModal);
+      }
+      showModal(successModal);
+    }
   } else {
-    alert('Форма не відправлена. Спробуйте ще раз');
+    const errorModal = document.getElementById('isError');
+
+    if (!initializedModals.has(errorModal)) {
+      initCloseModal(errorModal);
+    }
+    showModal(errorModal);
   }
+
+  const activeModal = document.querySelector('.signup.isOpened');
+
+  if (activeModal) {
+    closeModal(activeModal);
+  }
+  setTimeout(() => form?.reset(), 300);
 }
 
 function submitForm(e) {
@@ -71,9 +99,7 @@ function submitForm(e) {
   });
 
   if (!errors) {
-    setTimeout(() => e.target.reset(), 300);
-
-    // sendForm(e.target);
+    sendForm(e.target);
   }
 }
 
