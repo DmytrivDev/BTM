@@ -1,0 +1,12 @@
+.media {
+  &.partners {
+    padding-top: 6.75rem;
+    .partners__tl {
+      max-width: 41.5625rem;
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  .media {
+  }
+}

@@ -2,17 +2,17 @@
   <div class="plans__period">
     <div class="plans__box">
       <label>
-        <input type="radio" name="period" value="3" checked />
+        <input type="radio" name="period" value="tab-3 month" checked />
         <p>3 month</p>
       </label>
       <label>
-        <input type="radio" name="period" value="6" />
+        <input type="radio" name="period" value="tab-6 month" />
         <p>6 month</p>
       </label>
     </div>
   </div>
 
-  <ul class="plans__cards plansThree">
+  <ul class="plans__cards" id="tab-3 month">
     <li class="card-plan" id="basic">
       <h3 class="card-plan__name">Basic</h3>
       <p class="card-plan__discount">86$</p>
@@ -87,7 +87,7 @@
       </button>
     </li>
   </ul>
-  <ul class="plans__cards plansSix is-hidden">
+  <ul class="plans__cards is-hidden" id="tab-6 month">
     <li class="card-plan" id="basic">
       <h3 class="card-plan__name">Basic</h3>
       <p class="card-plan__discount">106$</p>
