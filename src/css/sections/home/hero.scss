@@ -80,10 +80,11 @@
 
   &__video {
     position: absolute;
-    z-index: -3;
+    z-index: -10;
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 67.5rem;
     height: 100vh;
 
     video {
@@ -106,7 +107,7 @@
       height: 100%;
       background: linear-gradient(
         180deg,
-        rgba(0, 200, 163, 0) 63.06%,
+        rgba(0, 200, 163, 0) 80%,
         #00c8a3 100%
       );
     }
@@ -163,7 +164,7 @@
     }
 
     &__video {
-      height: calc(100vh - 30rem);
+      min-height: 44.8125rem;
     }
   }
 }

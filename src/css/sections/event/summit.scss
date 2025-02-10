@@ -114,11 +114,17 @@
       padding: 3.125rem 0.9375rem 1.875rem 0.9375rem;
       border-radius: 0.9375rem;
     }
+
     &__content {
       & > .btn-def {
         margin: 0 auto;
         width: 100%;
         max-width: 18.125rem;
+      }
+    }
+    &__heading {
+      br {
+        display: none;
       }
     }
 
