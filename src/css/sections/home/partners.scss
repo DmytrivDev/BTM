@@ -31,5 +31,13 @@
     &__tl {
       max-width: 18.125rem;
     }
+
+    &__box {
+      height: 4.8125rem;
+      max-width: 7.9375rem;
+      img {
+        max-height: 100%;
+      }
+    }
   }
 }

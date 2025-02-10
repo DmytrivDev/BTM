@@ -41,7 +41,8 @@
     flex-wrap: wrap;
     gap: 5.25rem 3.75rem;
     li {
-      flex-basis: calc((100% - 2 * 3.75rem) / 3);
+      width: 100%;
+      max-width: calc((100% - 2 * 3.75rem) / 3);
       & > span {
         display: block;
         width: 2.75rem;
@@ -78,7 +79,7 @@
     &__list {
       gap: 1.875rem;
       li {
-        flex-basis: calc((100% - 1 * 1.875rem) / 2);
+        max-width: calc((100% - 1 * 1.875rem) / 2);
         & > span {
           width: 1.875rem;
           margin-bottom: 0.625rem;
@@ -95,7 +96,7 @@
   .audience {
     &__list {
       li {
-        flex-basis: 100%;
+        max-width: 100%;
       }
     }
   }

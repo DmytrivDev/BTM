@@ -99,7 +99,8 @@
       ul {
         justify-content: center;
         li {
-          flex-basis: calc((100% - 1 * 0.9375rem) / 2);
+          width: 100%;
+          max-width: calc((100% - 1 * 0.9375rem) / 2);
 
           a {
             border-radius: 0.5rem;

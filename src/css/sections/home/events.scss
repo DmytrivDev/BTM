@@ -74,8 +74,9 @@
 }
 
 .card-def {
+  width: 100%;
   position: relative;
-  flex-basis: calc((100% - 2 * 1.875rem) / 3);
+  max-width: calc((100% - 2 * 1.875rem) / 3);
   border-radius: 1rem;
   background-color: var(--cw2);
   overflow: hidden;
@@ -331,7 +332,7 @@
   .card-def {
     flex: 1 1 auto;
     border-radius: 0.75rem;
-    flex-basis: 100%;
+    max-width: 100%;
 
     &__img {
       border-radius: 0.75rem;

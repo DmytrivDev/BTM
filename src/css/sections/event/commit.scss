@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem 1.875rem;
+    margin-bottom: 2.3906rem;
   }
   &__item {
     color: var(--cw);
@@ -59,64 +60,78 @@
     font-size: 0.875rem;
     line-height: 1.35714;
   }
+
+  &__pagin {
+    & > div,
+    & > .facetwp-facet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      width: fit-content;
+      color: var(--cy);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      line-height: 1.53333;
+      text-align: center;
+      padding: 0.7188rem 2rem;
+      border: 0.0625rem solid var(--cy);
+      background-color: transparent;
+      border-radius: 0.75rem;
+      transition: all 0.15s ease-in;
+      &:hover {
+        background-color: var(--cm);
+        border-color: transparent;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
   .commit {
-    padding-top: 2.625rem;
-    margin-bottom: -19.625rem;
+    padding-top: 4.375rem;
 
     &__heading {
-      padding-right: 0;
-    }
-    &__subtl {
-      font-size: 2rem;
-      line-height: 1.0625;
-      margin-bottom: -0.25rem;
+      br {
+        display: none;
+      }
+      margin-bottom: 1.75rem;
     }
     &__tl {
-      font-size: 2.875rem;
-      line-height: normal;
+      font-size: 2.8125rem;
+      line-height: 1;
     }
 
-    &__splide {
-      .arrows {
-        position: static;
-        transform: none;
-      }
-      .arrows__prev {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0.625rem;
-      }
-      .arrows__next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0.625rem;
-      }
+    &__list {
+      gap: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+    &__item {
+      gap: 0.625rem 0;
+      max-width: calc((100% - 1 * 1.875rem) / 2);
     }
 
-    &__img {
-      border-radius: 0.75rem;
-    }
     &__link {
       font-size: 1.125rem;
       line-height: 1.44444;
     }
 
-    &__box {
-      gap: 0.75rem 0;
-      margin-bottom: 0.75rem;
+    &__pagin {
+      button {
+        width: 100%;
+        max-width: 18.125rem;
+        padding: 0.75rem 1.5625rem;
+        border-radius: 0.5rem;
+      }
     }
+  }
+}
 
-    &__fltr {
-      display: none;
-    }
-
-    .splide__track {
-      overflow: visible;
+@media screen and (max-width: 475px) {
+  .commit {
+    &__item {
+      max-width: 100%;
     }
   }
 }

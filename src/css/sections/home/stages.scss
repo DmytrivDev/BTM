@@ -7,11 +7,12 @@
     flex-wrap: wrap;
     gap: 3.75rem;
     li {
+      width: 100%;
       position: relative;
       display: flex;
       flex-direction: column;
       gap: 1.9375rem 0;
-      flex-basis: calc((100% - 2 * 3.75rem) / 3);
+      max-width: calc((100% - 2 * 3.75rem) / 3);
     }
   }
 
@@ -43,7 +44,7 @@
       gap: 2.5rem;
       li {
         gap: 0.625rem 0;
-        flex-basis: 100%;
+        max-width: 100%;
       }
     }
 

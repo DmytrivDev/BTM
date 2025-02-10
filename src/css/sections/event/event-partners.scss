@@ -53,32 +53,39 @@
 @media screen and (max-width: 960px) {
   .event-partners {
     &.partners {
+      padding-top: 2.4375rem;
+
+      .partners__heading {
+        margin-bottom: 1.875rem;
+      }
+
       .partners__fltr {
-        div {
-          &:nth-child(1) {
-            top: -6.4375rem;
-            left: -2.9112rem;
-            width: 16.59869rem;
-            height: 17.10806rem;
-            border-radius: 17.10806rem;
-            filter: blur(4.4942rem);
-          }
-          &:nth-child(2) {
-            top: -145.06px;
-            left: -7.75rem;
-            width: 15.50175rem;
-            height: 12.28056rem;
-            filter: blur(3.146rem);
-          }
-          &:nth-child(3) {
-            top: -3.9356rem;
-            left: -7.75rem;
-            width: 16.25413rem;
-            height: 15.43019rem;
-            border-radius: 16.25413rem;
-            filter: blur(3.146rem);
-          }
-        }
+        display: none;
+        // div {
+        //   &:nth-child(1) {
+        //     top: -6.4375rem;
+        //     left: -2.9112rem;
+        //     width: 16.59869rem;
+        //     height: 17.10806rem;
+        //     border-radius: 17.10806rem;
+        //     filter: blur(4.4942rem);
+        //   }
+        //   &:nth-child(2) {
+        //     top: -145.06px;
+        //     left: -7.75rem;
+        //     width: 15.50175rem;
+        //     height: 12.28056rem;
+        //     filter: blur(3.146rem);
+        //   }
+        //   &:nth-child(3) {
+        //     top: -3.9356rem;
+        //     left: -7.75rem;
+        //     width: 16.25413rem;
+        //     height: 15.43019rem;
+        //     border-radius: 16.25413rem;
+        //     filter: blur(3.146rem);
+        //   }
+        // }
       }
     }
   }
