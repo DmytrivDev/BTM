@@ -5,9 +5,9 @@ import { closeMenu } from './mobmenu';
 import { addDataAmbass } from './ambass';
 
 const activeModals = new Set();
-const initializedModals = new WeakSet();
+export const initializedModals = new WeakSet();
 
-function showModal(modal) {
+export function showModal(modal) {
   modal.classList.add('isOpened', 'isAnimation');
   scrollLock.disablePageScroll(modal, { reserveScrollBarGap: true });
   activeModals.add(modal);
@@ -19,7 +19,7 @@ export function closeModal(modal) {
   activeModals.delete(modal);
 }
 
-function initCloseModal(modal) {
+export function initCloseModal(modal) {
   if (initializedModals.has(modal)) return;
 
   const modalContainer = modal.querySelector('.containerModal');
@@ -40,7 +40,7 @@ function initCloseModal(modal) {
   initializedModals.add(modal);
 }
 
-export function openModal(modalId, event) {
+export function openModal(modalId, event, name, title, success) {
   const modal = document.getElementById(modalId);
   if (modal) {
     activeModals.forEach(activeModal => {
@@ -58,6 +58,9 @@ export function openModal(modalId, event) {
       closeMenu();
       addDataAmbass(modal, event);
       showModal(modal);
+      document.getElementById('formname').value = name;
+      document.getElementById('formtitle').innerHTML = title;
+      modal.querySelector('form').dataset.success = success;
     }
   }
 }
@@ -67,8 +70,11 @@ function initOpenModal() {
   btnsOpenModal.forEach(btn => {
     btn.addEventListener('click', event => {
       const modalId = btn.dataset.id;
+      const modaName = btn.dataset.name;
+      const modaTtl = btn.dataset.title;
+      const success = btn.dataset.success;
       if (modalId) {
-        openModal(modalId, event);
+        openModal(modalId, event, modaName, modaTtl, success);
       }
     });
   });

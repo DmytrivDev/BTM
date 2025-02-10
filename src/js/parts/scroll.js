@@ -1,7 +1,7 @@
 import scrollToElement from 'scroll-to-element';
 
 const anchorLinks = document.querySelectorAll(
-  '.navmenu__list a, .footer__list a, .btn-anchor'
+  'a[href^="#"]'
 );
 
 anchorLinks?.forEach(link => {
