@@ -43,6 +43,7 @@
 @import url('./sections/event/commit.scss');
 @import url('./sections/event/speaker.scss');
 @import url('./sections/event/keys.scss');
+@import url('./sections/event/summit.scss');
 @import url('./sections/event/tickets.scss');
 @import url('./sections/event/event-partners.scss');
 @import url('./sections/event/media.scss');
