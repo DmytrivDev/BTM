@@ -14,3 +14,4 @@ import './parts/plans.js';
 import './parts/sidebar.js';
 import './parts/policy.js';
 import './parts/ambass.js';
+import './parts/calendar.js';
