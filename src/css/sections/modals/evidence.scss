@@ -49,11 +49,16 @@
           border: 0.0625rem solid var(--cm);
           border-radius: 0.75rem;
           padding: 1.25rem;
+          transition: all 0.15s ease-in;
           span {
             width: 1rem;
             img {
               width: 100%;
             }
+          }
+          &:hover {
+            background-color: var(--cy);
+            border-color: transparent;
           }
         }
       }

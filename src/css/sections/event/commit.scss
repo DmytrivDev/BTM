@@ -16,15 +16,41 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem 1.875rem;
-    margin-bottom: 2.3906rem;
+
+    &.isAnim {
+      .commit__item {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &.isOpened {
+      .commit__item {
+        display: flex;
+      }
+    }
   }
   &__item {
     color: var(--cw);
-    display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     gap: 1.0625rem 0;
     width: 100%;
     max-width: calc((100% - 3 * 1.875rem) / 4);
+
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in;
+    &:nth-child(-n + 8) {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0625rem 0;
   }
 
   &__img {
@@ -56,19 +82,21 @@
     }
   }
 
-  &__desc {
+  &__activity {
     font-size: 0.875rem;
     line-height: 1.35714;
   }
+  &__desc,
+  &__soc {
+    display: none;
+  }
 
   &__pagin {
-    & > div,
-    & > .facetwp-facet {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.3906rem;
+    .addMore {
+      display: block;
       width: fit-content;
       color: var(--cy);
       font-weight: 700;
@@ -105,11 +133,24 @@
 
     &__list {
       gap: 1.875rem;
-      margin-bottom: 1.875rem;
     }
     &__item {
       gap: 0.625rem 0;
       max-width: calc((100% - 1 * 1.875rem) / 2);
+
+      &:nth-child(-n + 8) {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:nth-child(-n + 4) {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__box {
+      gap: 0.625rem 0;
     }
 
     &__link {
@@ -118,7 +159,8 @@
     }
 
     &__pagin {
-      button {
+      margin-top: 1.875rem;
+      .addMore {
         width: 100%;
         max-width: 18.125rem;
         padding: 0.75rem 1.5625rem;
