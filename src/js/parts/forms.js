@@ -19,29 +19,34 @@ forms?.forEach(form => {
 
 async function sendForm(form) {
   const ajaxurl = '/wp-admin/admin-ajax.php';
-  const headers = { "Content-Type": "multipart/form-data" };
+  const headers = { 'Content-Type': 'multipart/form-data' };
   const myFormData = new FormData(form);
   const params = Object.fromEntries(myFormData.entries());
 
   try {
-      const responce = await axios.get(ajaxurl, {params}, {headers});
-      if(responce.data !== 'error') {
-          formEnd(form, true);
-      } else {
-          formEnd(form, false);
-      }
-      
-  } catch(error) {
+    const responce = await axios.get(ajaxurl, { params }, { headers });
+    if (responce.data !== 'error') {
+      formEnd(form, true);
+    } else {
       formEnd(form, false);
+    }
+    return;
+  } catch (error) {
+    formEnd(form, 'false');
   }
 }
 
 function formEnd(form, status) {
   if (status) {
     const successUrl = form.dataset.success;
+    const payUrl = form.dataset.payment;
 
-    if (successUrl) {
-      window.location.href = successUrl;
+    if (successUrl || payUrl) {
+      if (form.classList.contains('pay')) {
+        window.location.href = payUrl;
+      } else {
+        window.location.href = successUrl;
+      }
     } else {
       const successModal = document.getElementById('isSuccess');
 
@@ -65,6 +70,23 @@ function formEnd(form, status) {
     closeModal(activeModal);
   }
   setTimeout(() => form?.reset(), 300);
+}
+
+const formBtns = document.querySelectorAll('.formSubmit');
+
+if (formBtns) {
+  formBtns.forEach(formBtn => {
+    formBtn.addEventListener('click', evt => {
+      const target = evt.target;
+      const form = target.closest('form');
+
+      if (target.classList.contains('payNow')) {
+        form.classList.add('pay');
+      } else {
+        form.classList.remove('pay');
+      }
+    });
+  });
 }
 
 function submitForm(e) {

@@ -40,7 +40,7 @@ export function initCloseModal(modal) {
   initializedModals.add(modal);
 }
 
-export function openModal(modalId, event, name, title, success) {
+export function openModal(modalId, event, name, title, success, pay) {
   const modal = document.getElementById(modalId);
   if (modal) {
     activeModals.forEach(activeModal => {
@@ -61,6 +61,13 @@ export function openModal(modalId, event, name, title, success) {
       document.getElementById('formname').value = name;
       document.getElementById('formtitle').innerHTML = title;
       modal.querySelector('form').dataset.success = success;
+
+      if(pay) {
+        modal.querySelector('form').dataset.payment = pay;
+        modal.querySelector('#payNow').classList.remove('hideBtn');
+      } else {
+        modal.querySelector('#payNow').classList.showe('hideBtn');
+      }
     }
   }
 }
@@ -73,8 +80,9 @@ function initOpenModal() {
       const modaName = btn.dataset.name;
       const modaTtl = btn.dataset.title;
       const success = btn.dataset.success;
+      const pay = btn.dataset.pay;
       if (modalId) {
-        openModal(modalId, event, modaName, modaTtl, success);
+        openModal(modalId, event, modaName, modaTtl, success, pay);
       }
     });
   });
