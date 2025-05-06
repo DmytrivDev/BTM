@@ -10,6 +10,7 @@ import './parts/scroll.js';
 import './parts/videoplay.js';
 import './parts/filtermodal.js';
 import './parts/select.js';
+import './parts/tabs.js';
 import './parts/plans.js';
 import './parts/sidebar.js';
 import './parts/policy.js';

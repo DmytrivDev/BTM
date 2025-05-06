@@ -32,7 +32,12 @@
 @import url('./sections/home/reviews.scss');
 @import url('./sections/home/subscribe.scss');
 @import url('./sections/home/stages.scss');
+
+@import url('./sections/home/purchase.scss');
+@import url('./sections/home/type.scss');
 @import url('./sections/home/plans.scss');
+@import url('./sections/home/ceo.scss');
+
 @import url('./sections/home/join.scss');
 @import url('./sections/home/partners.scss');
 @import url('./sections/home/faq.scss');

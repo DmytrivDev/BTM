@@ -1,13 +1,24 @@
-const periodInputs = document.querySelectorAll('input[name="period"]');
+function setupTabsSections() {
+  const tabsSections = document.querySelectorAll('.plans, .tickets');
 
-const plans = document.querySelectorAll('.plans__cards, .tickets__cards');
+  tabsSections.forEach(section => {
+    const radios = section.querySelectorAll('input[type="radio"]');
 
-periodInputs?.forEach(input => {
-  input.addEventListener('change', () => {
-    plans.forEach(plan => {
-      plan.classList.add('is-hidden');
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const selectedId = radio.value;
+        const tabs = section.querySelectorAll('.plans__cards, .tickets__cards');
+
+        tabs.forEach(tab => {
+          if (tab.id === selectedId) {
+            tab.classList.remove('is-hidden');
+          } else {
+            tab.classList.add('is-hidden');
+          }
+        });
+      });
     });
-
-    document.getElementById(input.value).classList.remove('is-hidden');
   });
-});
+}
+
+document.addEventListener('DOMContentLoaded', setupTabsSections);
