@@ -3,20 +3,24 @@ import scrollLock from 'scroll-lock';
 import { pauseVideo } from './videoplay';
 import { closeMenu } from './mobmenu';
 import { addDataAmbass } from './ambass';
+import { addDataCeo } from './ceo';
 
 const activeModals = new Set();
 export const initializedModals = new WeakSet();
 
 export function showModal(modal) {
-  modal.classList.add('isOpened', 'isAnimation');
+  modal.classList.add('isOpened');
   scrollLock.disablePageScroll(modal, { reserveScrollBarGap: true });
   activeModals.add(modal);
 }
 
 export function closeModal(modal) {
-  modal.classList.remove('isOpened', 'isAnimation');
-  scrollLock.enablePageScroll(modal);
-  activeModals.delete(modal);
+  modal.classList.remove('isOpened');
+
+  setTimeout(() => {
+    scrollLock.enablePageScroll(modal);
+    activeModals.delete(modal);
+  }, 150);
 }
 
 export function initCloseModal(modal) {
@@ -57,12 +61,13 @@ export function openModal(modalId, event, name, title, success, pay) {
       pauseVideo();
       closeMenu();
       addDataAmbass(modal, event);
+      addDataCeo(modal, event);
       showModal(modal);
       document.getElementById('formname').value = name;
       document.getElementById('formtitle').innerHTML = title;
       modal.querySelector('form').dataset.success = success;
 
-      if(pay) {
+      if (pay) {
         modal.querySelector('form').dataset.payment = pay;
         modal.querySelector('#payNow').classList.remove('hideBtn');
       } else {

@@ -59,6 +59,7 @@
 @import url('./sections/modals/evidence.scss');
 @import url('./sections/modals/signup.scss');
 @import url('./sections/modals/registr.scss');
+@import url('./sections/modals/ceoinf.scss');
 
 /* Thank */
 @import url('./sections/thank/thank.scss');

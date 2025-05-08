@@ -18,11 +18,9 @@
   visibility: hidden;
   pointer-events: none;
 
-  &.isAnimation {
-    -webkit-transition: all 0.15s ease-in;
-    -o-transition: all 0.15s ease-in;
-    transition: all 0.15s ease-in;
-  }
+  -webkit-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 
   &.isOpened {
     opacity: 1;
