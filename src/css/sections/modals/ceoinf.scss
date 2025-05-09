@@ -12,6 +12,12 @@
   margin-bottom: 1.5625rem;
 }
 
+.ceoinf__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem 0;
+}
+
 @media screen and (max-width: 960px) {
   .modal {
     .modal__body {

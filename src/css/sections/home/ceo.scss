@@ -47,6 +47,9 @@
     margin-top: auto;
     margin-bottom: 0.9375rem;
   }
+  &__descript {
+    display: none;
+  }
   &__more {
     width: fit-content;
     display: flex;
